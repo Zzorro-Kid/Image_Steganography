@@ -26,6 +26,7 @@ static void print_image_info(const std::string& path) {
         std::cerr << "Error getting file size: " << ec.message() << "\n";
         return;
     }
+    
     struct stat st{};
     if (stat(path.c_str(), &st) != 0) {
         std::cerr << "Error getting file modification time\n";
